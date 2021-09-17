@@ -5,7 +5,7 @@
   - Add a check for null values, and if one exists, exit the program
   - Do not edit any of the existing code
 */
-
+//import process from 'process';
 var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 
 // If there is a null value in the array exit the program with the error code
@@ -14,6 +14,32 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+
+/*function isNull(indexes) {
+  if (indexes !== null) {
+    pairs;
+  }else {
+    process.exit(1);
+  }
+}*/
+
+/*function isNull (data) {
+  if (data == null) {
+    process.exit(1);  
+    }
+}*/
+
+/*if (pairs == null) {
+  process.exit(1);
+}*/
+
+function isNull(indexes) {
+  indexes == null ? process.exit(1) : pairs;
+}
+
+pairsByIndex.some(isNull);
+
+
 
 var pairs = pairsByIndex.map(function (indexes) {
   var student = students[indexes[0]];
