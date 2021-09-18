@@ -12,8 +12,14 @@
 
 let story =
   "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.";
+const mapObj = {
+  dogs: "cats",
+  day: "night",
+  10: "100000",
+  great: "brilliant"
+}
 
-let result = story.replace("", "");
+let result = story.replace(/\b(?:dogs|day|10|great)\b/gi, matched => mapObj[matched]);
 
 /* EXPECTED OUTPUT */
 
